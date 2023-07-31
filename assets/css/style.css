@@ -1,0 +1,98 @@
+body {
+    /*background-color: rgb(68, 97, 97);*/
+}
+
+#content-menu {
+    width: 1200px;
+    height: 900px;
+   background-color: #8dadc1;
+    margin: 0 auto;
+}
+
+.eight-speeches {
+    width: 12%;
+    height: 50px;
+    background-color: rgb(14, 52, 83);
+    display: inline-block;
+    border-radius: 5%;
+    margin-left: 2px;
+    margin-bottom: 30px;
+}
+
+.eight-speeches h3 {
+    text-align: center;
+    
+}
+
+#content-holder {
+    width: 800px;
+    height: 200px;
+    border-radius: 2%;
+    background-color: #324654;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+#content-holder h2, h3, p, li {
+    text-align: center;
+    color: white;
+    padding: 1%;
+    
+}
+
+#quiz-menu {
+    
+    margin-bottom: 15px;
+}
+.eight-speeches-quiz {
+    width: 12%;
+    height: 50px;
+    background-color: rgb(14, 52, 83);
+    display: inline-block;
+    border-radius: 5%;
+    margin-top: 15px;
+    margin-left: 2px;
+    margin-bottom: 30px;
+    
+}
+
+#quiz-content-holder {
+    width: 800px;
+    height: 200px;
+    border-radius: 2%;
+    background-color: #324654;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+#quiz-content-holder h2, h3, p, li {
+    text-align: center;
+    color: white;
+    padding: 1%;
+    
+}
+
+.holder-header {
+    text-align: center;
+    
+
+}
+
+.score-area {
+    margin-left: 35%;
+}
+
+.scores {
+    display: inline-block;
+    padding: 25px;
+}
+
+#score {
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
+}
