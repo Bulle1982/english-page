@@ -5,13 +5,13 @@ body {
 #content-menu {
     width: 1200px;
     height: 900px;
-   background-color: #8dadc1;
+   /*background-color: #8dadc1;*/
     margin: 0 auto;
 }
 
 .eight-speeches {
     width: 12%;
-    height: 50px;
+    height: 36px;
     background-color: rgb(14, 52, 83);
     display: inline-block;
     border-radius: 5%;
@@ -27,7 +27,7 @@ body {
 #content-holder {
     width: 800px;
     height: 200px;
-    border-radius: 2%;
+    border-radius: 5%;
     background-color: #324654;
     margin: 0 auto;
     overflow-y: scroll;
@@ -44,7 +44,7 @@ margin-bottom: 15px;
 }
 .eight-speeches-quiz {
     width: 12%;
-    height: 50px;
+    height: 36px;
     background-color: rgb(14, 52, 83);
     display: inline-block;
     border-radius: 5%;
@@ -57,7 +57,7 @@ margin-bottom: 15px;
 #quiz-content-holder {
     width: 800px;
     height: 200px;
-    border-radius: 2%;
+    border-radius: 5%;
     background-color: #324654;
     margin: 0 auto;
     overflow-y: scroll;
@@ -72,6 +72,7 @@ margin-bottom: 15px;
 
 .holder-header {
     text-align: center;
+    color: white;
     
 
 }
@@ -84,12 +85,30 @@ list-style: none;
 
 }
 
+.inner-div p { 
+    margin: 0 auto;
+   
+      
+  }
+  .paragraphs {
+    width: 240px;
+    border: 2px solid rgb(77, 77, 113);
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+   
+  }
+  
+  .quiz-heading, p {
+    text-align: center;
+  }
+
 .score-area {
     margin-top: 15px;
     margin-left: 35%;
     margin-right: 30%;
     background-color: #324654;
-    border-radius: 2%;
+    border-radius: 5%;
 }
 
 .scores {
@@ -105,4 +124,8 @@ list-style: none;
 #incorrect {
     color: red;
     font-weight: bold;
+}
+
+.heading-class {
+    margin: 0 auto;
 }

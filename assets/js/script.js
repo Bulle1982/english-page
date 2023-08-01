@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let contentHolder = document.getElementById('content-holder');
     let speeches = document.getElementsByClassName('eight-speeches');
     let speechQuizs = document.getElementsByClassName('eight-speeches-quiz');
+    let quizContentHolder = document.getElementById('quiz-content-holder');
     for (let speech of speeches) {
         speech.addEventListener('click', function() {
             if (this.innerText == "Nouns") {
@@ -257,7 +258,25 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let speechQuiz of speechQuizs) {
         speechQuiz.addEventListener('click', function() {
             if (this.innerText == "Nouns") {
-                alert('Hey! You clicked quiz noun!');
+              quizContentHolder.innerHTML = `<div div class="inner-div">
+ 
+              <h2>1. What is a noun?</h2>
+              <p class="paragraphs">A word that expresses actions.</p>
+              <br>
+              <p class="paragraphs">A word that shows ownership.</p>
+              <br>
+              <p class="paragraphs" id="correct-one">A name of anything.</p>
+              <br>
+              <h2>2. Name the types of nouns.</h2>
+              <p class="paragraphs">Long noun and short noun.</p>
+              <br>
+              <p class="paragraphs" id="correct-two">Proper noun and Common noun.</p>
+              <br>
+              <p class="paragraphs">Clear nouns and hard nouns.</p>
+              
+              
+            
+            </div>`
             } else {
                 alert('Hey! I have no idea which quiz item you clicked!');
             }
