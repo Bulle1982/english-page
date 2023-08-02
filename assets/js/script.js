@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     let contentHolder = document.getElementById('content-holder');
+    let quizContentHolder = document.getElementById('quiz-content-holder');
     let speeches = document.getElementsByClassName('eight-speeches');
     let speechQuizs = document.getElementsByClassName('eight-speeches-quiz');
-    let quizContentHolder = document.getElementById('quiz-content-holder');
+    
     for (let speech of speeches) {
         speech.addEventListener('click', function() {
             if (this.innerText == "Nouns") {
@@ -255,31 +256,106 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    
+
+
     for (let speechQuiz of speechQuizs) {
-        speechQuiz.addEventListener('click', function() {
-            if (this.innerText == "Nouns") {
-              quizContentHolder.innerHTML = `<div div class="inner-div">
+      speechQuiz.addEventListener('click', function() {
+        if (this.innerText == "Nouns") {
+          quizContentHolder.innerHTML = quizContentHolder.innerHTML = `<div class="inner-div">
  
-              <h2>1. What is a noun?</h2>
-              <p class="paragraphs">A word that expresses actions.</p>
-              <br>
-              <p class="paragraphs">A word that shows ownership.</p>
-              <br>
-              <p class="paragraphs" id="correct-one">A name of anything.</p>
-              <br>
-              <h2>2. Name the types of nouns.</h2>
-              <p class="paragraphs">Long noun and short noun.</p>
-              <br>
-              <p class="paragraphs" id="correct-two">Proper noun and Common noun.</p>
-              <br>
-              <p class="paragraphs">Clear nouns and hard nouns.</p>
-              
-              
-            
-            </div>`
-            } else {
-                alert('Hey! I have no idea which quiz item you clicked!');
-            }
-        })
+          <h2 class="quiz-heading">1. What is a noun?</h2>
+          <p class="paragraphs"><span>a: </span>A word that expresses actions.</p>
+          <br>
+          <p class="paragraphs"><span>b: </span>A word that shows ownership.</p>
+          <br>
+          <p class="paragraphs" id="correct-one"><span>c: </span>A name of anything.</p>
+           
+          <h2 class="quiz-heading">2. Name the types of nouns.</h2>
+          <p class="paragraphs"><span>a: </span>Long noun and short noun.</p>
+          <br>
+          <p class="paragraphs" id="correct-two"><span>b: </span>Proper noun and Common noun.</p>
+          <br>
+          <p class="paragraphs"><span>c: </span>Clear nouns and hard nouns.</p>
+           <h2 class="quiz-heading">3. There are proper noun and common noun here.</h2>
+          <p class="paragraphs"><span>a: </span>James is a bus driver.</p>
+          <br>
+          <p class="paragraphs" id="correct-two"><span>b: </span>Ali is an interpreter for men.</p>
+          <br>
+          <p class="paragraphs"><span>c: </span>This woman smokes cigarettes.</p>
+           <h2 class="quiz-heading">4. Which sentence contains a proper noun?</h2>
+          <p class="paragraphs"><span>a: </span>The woman is CEO's wife.</p>
+          <br>
+          <p class="paragraphs"><span>b: </span>He got so mad at the students.</p>
+          <br>
+          <p class="paragraphs" id="correct-two"><span>c: </span>Bulle is a EA's fintech expert.</p>
+           <h2 class="quiz-heading">5. What is a proper noun?.</h2>
+          <p class="paragraphs"><span>a: </span>Names of towns and cities.</p>
+          <br>
+          <p class="paragraphs" id="correct-two"><span>b: </span>Specific names of anything.</p>
+          <br>
+          <p class="paragraphs"><span>c: </span>Names of animals and birds.</p>
+           <h2 class="quiz-heading">6. What is a common noun?</h2>
+          <p class="paragraphs"><span>a: </span>Names of specific persons/places.</p>
+          <br>
+          <p class="paragraphs" id="correct-two"><span>b: </span>Names of things of same kind.</p>
+          <br>
+          <p class="paragraphs"><span>c: </span>Names of generals in the military.</p>
+         
+        </div>`;
+        quizEngine();
+        
+      }  else {
+        alert('Hey! I have no idea which quiz you clicked!');
+        
+      }
+      })
+      
     }
 });
+
+/**
+ * Quiz Engine
+ */
+
+function quizEngine() {
+  let paragraphs = document.getElementsByClassName('paragraphs');
+  for (let paragraph of paragraphs) {
+    paragraph.addEventListener('click', function() {
+      if (this.id == "correct-one") {
+      alert('Hey! You got right!');
+      this.style.backgroundColor = "green";
+      calculateScore();
+      
+    } else if (this.id == "correct-two") {
+      alert('Hey! You got right!');
+      this.style.backgroundColor = "green";
+      calculateScore();
+    } else {
+      alert('Hey! You did not make it!');
+      this.style.backgroundColor = "red";
+      calculateWrongScore();
+      
+    }
+    });
+    
+  }
+
+}
+
+
+/**
+ * Calculates score
+ */
+
+
+
+function calculateScore() {
+  let oldScore = parseInt(document.getElementById('score').innerText);
+  document.getElementById('score').innerText = ++oldScore;
+} 
+
+function calculateWrongScore() {
+  let oldScore = parseInt(document.getElementById('incorrect').innerText);
+  document.getElementById('incorrect').innerText = ++oldScore;
+}
