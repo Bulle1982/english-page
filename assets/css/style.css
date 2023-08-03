@@ -50,13 +50,19 @@ margin-bottom: 15px;
     border-radius: 5%;
     margin-top: 15px;
     margin-left: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     
 }
 
+.left-about {
+    float: left;
+}
+.right-about {
+    float: right;
+}
 #quiz-content-holder {
-    width: 800px;
-    height: 200px;
+    width: 550px;
+    height: 250px;
     border-radius: 5%;
     background-color: #324654;
     margin: 0 auto;
@@ -103,10 +109,20 @@ list-style: none;
     text-align: center;
   }
 
-.score-area {
+  .left-about .score-area {
+    text-align: center;
     margin-top: 25px;
-    margin-left: 35%;
-    margin-right: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #324654;
+    border-radius: 5%;
+}
+
+.right-about .score-area {
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
     background-color: #324654;
     border-radius: 5%;
 }
