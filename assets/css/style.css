@@ -40,7 +40,7 @@ body {
 }
 
 #quiz-menu {
-margin-bottom: 15px;
+margin-bottom: 5px;
 }
 .eight-speeches-quiz {
     width: 12%;
@@ -60,9 +60,15 @@ margin-bottom: 15px;
 .right-about {
     float: right;
 }
+
+.quiz-header {
+    text-align: center;
+    color: white;
+    border-color: #324654;
+}
 #quiz-content-holder {
     width: 550px;
-    height: 250px;
+    height: 225px;
     border-radius: 5%;
     background-color: #324654;
     margin: 0 auto;
